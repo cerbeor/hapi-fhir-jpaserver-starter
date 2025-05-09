@@ -215,7 +215,7 @@ hapi:
     #    filter_search_enabled: true
     #    graphql_enabled: true
     narrative_enabled: false
-    mdm_enabled: false
+    mdm_enabled: true
     mdm_rules_json_location: "mdm-rules.json"
     ##  see: https://hapifhir.io/hapi-fhir/docs/interceptors/built_in_server_interceptors.html#jpa-server-retry-on-version-conflicts
     #    userRequestRetryVersionConflictsInterceptorEnabled : false
@@ -236,11 +236,11 @@ hapi:
       - https://unitsofmeasure.org/*
       - http://loinc.org/*
       - https://loinc.org/*
-    #    partitioning:
-    #      allow_references_across_partitions: false
-    #      partitioning_include_in_search_hashes: false
+    partitioning:
+      allow_references_across_partitions: false
+      partitioning_include_in_search_hashes: false
     #      conditional_create_duplicate_identifiers_enabled: false
-    #      request_tenant_partitioning_mode: true
+      request_tenant_partitioning_mode: true
     cors:
       allow_Credentials: true
       # These are allowed_origin patterns, see: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#setAllowedOriginPatterns-java.util.List-
